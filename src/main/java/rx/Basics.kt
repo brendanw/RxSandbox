@@ -6,9 +6,6 @@ import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.rxkotlin.subscribeBy
 
-val computation = Schedulers.from(KSExecutorService.newComputationExecutor(2))
-val io = Schedulers.from(PausableThreadPoolExecutor.newCachedThreadPool())
-
 fun main(args: Array<String>) {
   // Create a list of fish
   val fishList: List<String> = listOf("dory", "clownfish", "tiger shark", "seahorse", "great white shark")
